@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+    --dark-color-lighten:#eaeaea;
+    --red-card: rgba(6, 247, 78, 0.7);
+    --btn: #141414;
+    --btn-hover: #3a3a3a;
+    --text: #1f4a1f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-color-lighten);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+button{
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .product_image{
+    transform: translateY(-1.8rem) scale(1.04);
+}
+
+.card{
+    background-color: var(--red-card);
+    width: 350px;
+    padding: 1rem;
+    box-shadow: -1px 15px 30px -12px rgb(32 201 29);
+    border-radius: 0.9rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.product_image{
+    text-align: center;
+    transform: translateY(0); /* inicio en 0 para permitir la animación al hover */
+    transition: transform 0.5s ease-in-out; /* animar solo la transform */
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+.product-info{
+    text-align: center;
+}
+
+.product-info h2{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin: 0.4rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.buy-btn{
+    background-color: var(--btn);
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.fav{
+    background: #fff;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+}
